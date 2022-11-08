@@ -1,2 +1,13 @@
-# React_JS_OTUS_Redux_saga_intro
-Redux-saga intro
+# Домашнее задание  
+### Redux-saga intro  
+  
+#### Цель:  
+Подключим redux в react приложение  
+  
+  
+#### Описание/Пошаговая инструкция выполнения домашнего задания:  
+Подключаем redux, переводим стейт приложения на redux.  
+  
+1. добавляем тесты для connect  
+2. подключаем redux-saga в наше приложение  
+3. реализуем сохранение state в local storage на saga  
