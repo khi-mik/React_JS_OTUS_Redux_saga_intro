@@ -1,5 +1,5 @@
 import flowSlice, { init, mutate, nextState } from "./flowSlice"
-/**Описывается состояние поля игры*/
+/**Game state description*/
 describe("flowSlice states tests", () => {
   it("initial state test", () => {
     expect(flowSlice(undefined, { type: "" })).toEqual({

@@ -32,6 +32,10 @@ const initialState = {
   percentage: GAME_POPULATION,
 } as GameSliceState
 
+const stateToString = (state: GameSliceState) => {
+  return JSON.stringify(state)
+}
+
 /**Game state description*/
 export const gameplaySlice = createSlice({
   name: "gameplay",
@@ -61,6 +65,9 @@ export const gameplaySlice = createSlice({
     fillPercentage: (state, action: GameStateAction) => {
       state.percentage = action.payload.value
     },
+    updateFinished: (state) => {
+      localStorage.setItem("gameplayState", stateToString(state))
+    },
   },
 })
 export const {
@@ -72,6 +79,7 @@ export const {
   fieldHeight,
   gameCellCount,
   fillPercentage,
+  updateFinished,
 } = gameplaySlice.actions
 
 export default gameplaySlice.reducer
